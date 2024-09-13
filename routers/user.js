@@ -5,4 +5,8 @@ const router=express.Router();
 router.get('/users',(req,res)=>{
     userController.getAllUsers(req,res);
 })
-module.exports=router
+router.get('/users/:id',(req,res)=>{
+     userController.getUser(req,res)
+
+})
+module.exports=router;
